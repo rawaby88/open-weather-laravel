@@ -1,0 +1,46 @@
+{
+    "name": "rawaby88/open-weather-laravel",
+    "description": "Connect Open weather map with laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "M.Osman",
+            "email": "admin@dreamod.pl"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Rawaby88\\OpenWeatherMap\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rawaby88\\OpenWeatherMap\\Test\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "orchestra/testbench": "^6.13"
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.2",
+        "ext-json": "*",
+        "ext-http": "*"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rawaby88\\OpenWeatherMap\\Providers\\OpenWeatherServiceProvider"
+            ],
+            "aliases": {
+                "CurrentWeather": "Rawaby88\\OpenWeatherMap\\Facades\\CurrentWeather"
+            }
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php vendor/bin/testbench package:discover --ansi"
+        ]
+    }
+}
