@@ -265,16 +265,16 @@ trait WorkWithWeatherDataSingleResult
         $this->assertEquals('meter/sec', $this->cw->distUnit);
         $this->assertEquals('Celsius', $this->cw->tempUnit);
     }
-	
-	/** @test */
-	public function it_change_unit_and_language()
-	{
-		$this->initCall();
-		
-		$this->cw->setLanguage('ru');
-		$this->assertEquals('ru', $this->cw->getlanguage());
-		
-		$this->cw->setUnitType('imperial');
-		$this->assertEquals('imperial', $this->cw->getUnitType());
-	}
+
+    /** @test */
+    public function it_change_unit_and_language()
+    {
+        $this->initCall();
+
+        $this->cw->setLanguage('ru');
+        $this->assertEquals('ru', $this->cw->getlanguage());
+
+        $this->cw->setUnitType('imperial');
+        $this->assertEquals('imperial', $this->cw->getUnitType());
+    }
 }
