@@ -12,7 +12,7 @@ trait CWMultiResultTrait
     /**
      * @var array Of CurrentWeather objects.
      */
-    private $list;
+    public $list;
 
     /**
      * @var array Hold query parameters for api call.

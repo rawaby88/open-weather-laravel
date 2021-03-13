@@ -26,8 +26,7 @@ class CWByCoordinates extends WeatherFactory implements CWSingleResultInterface
     /**
      * CWByCoordinates constructor.
      *
-     * You can call by city name or city name, state code and country code.
-     * Please note that searching by states available only for the USA locations.
+     * You can call by latitude and longitude coordinates.
      *
      * @param float $lat The latitude coordinate.
      * @param float $lon The longitude coordinate.

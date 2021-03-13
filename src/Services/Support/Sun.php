@@ -2,6 +2,7 @@
 
 namespace Rawaby88\OpenWeatherMap\Services\Support;
 
+use DateTime;
 use LogicException;
 
 /**
@@ -10,12 +11,12 @@ use LogicException;
 class Sun
 {
     /**
-     * @var int The sunrise time.
+     * @var DateTime The sunrise time.
      */
     public $sunrise;
 
     /**
-     * @var int The sunset time.
+     * @var DateTime The sunset time.
      */
     public $sunset;
 
@@ -50,7 +51,7 @@ class Sun
      */
     public function setSunrise(int $sunrise): void
     {
-        $this->sunrise = \DateTime::createFromFormat('U', $sunrise + $this->timezone);
+        $this->sunrise = DateTime::createFromFormat('U', $sunrise + $this->timezone);
     }
 
     /**
@@ -59,7 +60,7 @@ class Sun
      */
     public function setSunset(int $sunset): void
     {
-        $this->sunset = \DateTime::createFromFormat('U', $sunset + $this->timezone);
+        $this->sunset = DateTime::createFromFormat('U', $sunset + $this->timezone);
     }
 
     /**

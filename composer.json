@@ -1,6 +1,6 @@
 {
     "name": "rawaby88/open-weather-laravel",
-    "description": "Open weather map API laravel",
+    "description": "Laravel package to provide Open Weather Map API integration",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -30,10 +30,7 @@
         "laravel": {
             "providers": [
                 "Rawaby88\\OpenWeatherMap\\Providers\\OpenWeatherServiceProvider"
-            ],
-            "aliases": {
-                "CurrentWeather": "Rawaby88\\OpenWeatherMap\\Facades\\CurrentWeather"
-            }
+            ]
         }
     },
     "scripts": {

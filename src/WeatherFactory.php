@@ -87,8 +87,47 @@ abstract class WeatherFactory
                 $this->distUnit = 'meter/sec';
         }
     }
-
-    /**
+    
+	
+	/**
+	 * @param \Illuminate\Config\Repository|\Illuminate\Contracts\Foundation\Application|mixed $unitType
+	 */
+	public
+	function setUnitType( $unitType )
+	: void
+	{
+		$this->unitType = $unitType;
+	}
+	
+	/**
+	 * @param \Illuminate\Config\Repository|\Illuminate\Contracts\Foundation\Application|mixed $language
+	 */
+	public
+	function setLanguage( $language )
+	: void
+	{
+		$this->language = $language;
+	}
+	
+	/**
+	 * @return \Illuminate\Config\Repository|\Illuminate\Contracts\Foundation\Application|mixed
+	 */
+	public
+	function getLanguage()
+	{
+		return $this->language;
+	}
+	
+	/**
+	 * @return \Illuminate\Config\Repository|\Illuminate\Contracts\Foundation\Application|mixed
+	 */
+	public
+	function getUnitType()
+	{
+		return $this->unitType;
+	}
+	
+	/**
      * @param $apiCall
      * @param array $queryData
      * @throws NotFoundException

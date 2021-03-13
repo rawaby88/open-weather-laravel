@@ -328,4 +328,16 @@ trait WorkWithWeatherDataSeveralResult
 
         $this->assertEquals(75, $this->getCurrentWeather->clouds);
     }
+	
+	/** @test */
+	public function it_change_unit_and_language()
+	{
+		$this->initCall();
+		
+		$this->cw->setLanguage('ru');
+		$this->assertEquals('ru', $this->cw->getlanguage());
+		
+		$this->cw->setUnitType('imperial');
+		$this->assertEquals('imperial', $this->cw->getUnitType());
+	}
 }
